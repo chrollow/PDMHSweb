@@ -1,0 +1,23 @@
+@import "./utilities/variables";
+@import "./utilities/functions";
+@import "./utilities/mixins";
+@import "./utilities/animations";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./layout/grid";
+
+@import "./components/button";
+@import "./components/picture";
+@import "./components/navbar";
+@import "./components/newsletter";
+@import "./components/footer";
+@import "./components/insideHero";
+@import "./components/break";
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/plants";
+@import "./pages/courses";
+@import "./pages/starting";

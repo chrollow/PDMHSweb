@@ -1,0 +1,56 @@
+%button-placeholder {
+  padding: 16px 42px;
+  border-radius: 44px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  display: inline-block;
+  font-size: bodySize("mid");
+  line-height: 100%;
+
+  display: block;
+  max-width: 170px;
+  @include generateShadow("sm");
+
+  @include device("sm"){
+    margin: 0 auto;
+  }
+
+}
+
+.button {
+  @extend %button-placeholder;
+
+  &--primary {
+    background: $focus-regular;
+    color: $support-white-lighter;
+
+    &:hover {
+      background: $focus-dark;
+    }
+
+    &:visited {
+      color: $support-white-lighter;
+    }
+  }
+
+  &--disabled {
+    background: $support-white-regular;
+    color: $support-white-darker;
+    cursor: default;
+    box-shadow: none;
+  }
+
+  &--large {
+    max-width: 230px;
+    @include device("sm"){
+      max-width: 215px;
+
+    }
+  }
+
+  &--centered{
+    margin: 0 auto;
+  }
+}

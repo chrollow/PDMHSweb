@@ -1,0 +1,133 @@
+.hero {
+  @include spaceSection(128px, "top-bottom", "sm");
+
+  &__content {
+    padding-right: 100px;
+    @include device(medium) {
+      padding-right: 30px;
+    }
+    @include device("sm") {
+      padding-right: 0;
+    }
+  }
+  &__subtitle {
+    padding: 24px 0;
+  }
+
+  &__cards {
+    @include device("sm") {
+      padding-top: 64px;
+    }
+  }
+  .card {
+    @include generateShadow();
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &__image {
+      width: 100px;
+      height: 100px;
+      // background: $support-white-darker;
+      border-radius: 8px;
+
+      @include device("md") {
+        width: 70px;
+        height: 70px;
+      }
+      @include device("sm") {
+        width: 100px;
+        height: 100px;
+      }
+
+      & img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        height: 100%;
+      }
+    }
+    &__content {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 32px;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__arrow {
+      display: block;
+      width: 20px;
+
+      @include device("md") {
+        bottom: -1rem;
+      }
+    }
+  }
+}
+
+.mission {
+  @include spaceSection(80px, "bottom", "sm");
+
+  &__text {
+    @include spaceLateral(100px, "left");
+  }
+  &__title {
+    @include generateBottomBar();
+    padding-bottom: 1.5rem;
+  }
+  &__body {
+    padding-bottom: 1rem;
+  }
+
+  &__picture {
+    height: 300px;
+    @include device("sm") {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.impact {
+  @include spaceSection(80px, "top-bottom", "sm");
+
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/backgrounds/impacto.jpg");
+  background-position: center;
+  background-size: cover; 
+  background-attachment: fixed;
+
+  &__title,
+  &__body,
+  &__number,
+  &__info {
+    color: $support-white-lighter;
+    text-align: center;
+  }
+
+  &__title {
+    @include generateBottomBar($focus-regular, true);
+    // padding-bottom: 1.5rem;
+  }
+
+  &__body {
+    max-width: 670px;
+    margin: 32px auto;
+  }
+
+  span {
+    display: block;
+  }
+
+  &__card {
+    margin-bottom: 24px;
+  }
+
+  &__number {
+    font-size: 32px;
+  }
+}

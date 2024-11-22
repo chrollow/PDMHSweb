@@ -1,0 +1,49 @@
+.footer {
+  background: $base-regular;
+  @include spaceArticle();
+
+  & p {
+    color: $support-white-lighter;
+    @include device("sm"){
+      text-align: center;
+    }
+  }
+
+  &__link {
+    color: $focus-regular;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s ease-in;
+
+    &:hover{
+      color: $focus-lighter;
+    }
+
+    @include device("sm"){
+      display: block;
+      padding: 1rem 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__container {
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 200px;
+
+    @include device("sm"){
+      margin: 16px auto;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: flex-end;
+
+    @include device("sm"){
+      display: block;
+    }
+  }
+}

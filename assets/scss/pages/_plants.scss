@@ -1,0 +1,38 @@
+.plants {
+  @include spaceSection(80px, "top", "sm");
+
+  &__card {
+    @include spaceSection(80px, "bottom", "sm");
+  }
+
+  &__picture {
+    height: 400px;
+
+    & img {
+      height: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      // @include generateShadow();
+    }
+  }
+
+  &__text {
+    @include spaceLateral(100px, "right");
+
+    @include device("sm") {
+      padding-bottom: 2rem;
+      order: -1;
+    }
+  }
+
+  &__title {
+    @include generateBottomBar();
+    padding-bottom: 1.5rem;
+  }
+
+  &__body {
+    &:first-of-type {
+      padding-bottom: 1rem;
+    }
+  }
+}

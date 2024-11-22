@@ -1,0 +1,45 @@
+.history {
+  @include spaceSection();
+
+  &__card:first-child {
+    @include spaceSection(80px, "bottom");
+  }
+
+  &__picture {
+    width: 100%;
+    height: 300px;
+    background: $support-gray-lighter;
+    border-radius: 8px;
+  }
+
+  &__text {
+    @include device("sm") {
+      padding-bottom: 1rem;
+    }
+    &--right {
+      @include spaceLateral(100px, "right");
+
+      @include device("sm") {
+        order: -1;
+      }
+    }
+    &--left {
+      @include spaceLateral(100px, "left");
+    }
+  }
+
+  &__first-text {
+    @include device("sm") {
+      order: -1;
+    }
+  }
+
+  &__body {
+    padding-bottom: 1rem;
+  }
+
+  &__subtitle {
+    @include generateBottomBar();
+    padding-bottom: 1.5rem;
+  }
+}

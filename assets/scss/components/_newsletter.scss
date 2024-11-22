@@ -1,0 +1,48 @@
+.newsletter {
+  @include spaceSection(80px, "top-bottom", "sm");
+  position: relative;
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include device("sm") {
+      text-align: center;
+    }
+  }
+
+  &__form {
+    align-items: center;
+  }
+
+  &__input {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    padding: 12px 8px;
+    border: 2px solid $support-gray-lighter;
+    font-size: 1rem;
+    @include device("sm") {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    @include device("md") {
+      display: block;
+    }
+  }
+
+  &__message {
+    position: absolute;
+    margin-top: 10px;
+    color: $focus-dark;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      animation: show-down 0.3s forwards;
+    }
+  }
+}

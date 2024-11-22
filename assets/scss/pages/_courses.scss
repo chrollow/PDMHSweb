@@ -1,0 +1,56 @@
+.courses{
+  @include spaceSection(80px, "top-bottom");
+
+  &__card {
+    // border: 2px solid $base-regular;
+    border-radius: 8px;
+    @include generateShadow("md");
+
+    &--right{
+      margin-left: 40px;
+
+      @include device("sm"){
+        margin-left: 0;
+      }
+    }
+    &--left{
+      margin-right: 40px;
+      @include device("sm"){
+        margin-right: 0px;
+        margin-bottom: 3rem; 
+        // margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__content{
+    padding: 40px 20px;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px 8px 0 0;
+    background: $support-gray-regular;
+
+    @include device("sm"){
+      height: 200px;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    @include generateBottomBar($focus-regular, true);
+    padding: 1rem 0 0 0;
+  }
+
+  &__button {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  &__body {
+    padding: 1rem 0;
+  }
+}
